@@ -1,6 +1,6 @@
 Name:           frobtads
 Version:        1.2.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Text interpreter for Tads games
 
 License:        non-commercial
@@ -43,6 +43,10 @@ This package contains Tads 2 and Tads 3 compilers.
 
 
 %build
+%ifarch %{ix86}
+# required to build on 32-bit platforms
+CXXFLAGS=-fpermissive \
+%endif
 %configure
 make %{?_smp_mflags} V=1
 
@@ -71,5 +75,8 @@ rm -rf %{buildroot}%{_datadir}/frobtads/tads3/doc
 
 
 %changelog
+* Fri Oct 28 2016 František Dvořák <valtri@civ.zcu.cz> - 1.2.3-2
+- Add build flags needed for ix86 platforms
+
 * Mon Dec 28 2015 František Dvořák <valtri@civ.zcu.cz> - 1.2.3-1
 - Initial package
