@@ -43,9 +43,7 @@ This package contains Tads 2 and Tads 3 compilers.
 
 
 %build
-%ifarch %{ix86} %{arm}
-CXXFLAGS=-fpermissive \
-%endif
+CXXFLAGS="-fpermissive %optflags"
 %configure
 make %{?_smp_mflags} V=1
 
