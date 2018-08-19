@@ -1,6 +1,6 @@
 Name:           frobtads
 Version:        1.2.3
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Text interpreter for Tads games
 
 License:        non-commercial
@@ -72,6 +72,9 @@ rm -rf %{buildroot}%{_datadir}/frobtads/tads3/doc
 
 
 %changelog
+* Sun Aug 19 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.2.3-7
+- Rebuilt for Fedora 29 Mass Rebuild binutils issue
+
 * Fri Jul 27 2018 RPM Fusion Release Engineering <sergio@serjux.com> - 1.2.3-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
