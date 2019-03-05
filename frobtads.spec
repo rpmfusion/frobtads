@@ -7,6 +7,7 @@ License:        non-commercial
 URL:            http://www.tads.org/frobtads.htm
 Source0:        http://www.tads.org/%{name}/%{name}-%{version}.tar.gz
 
+BuildRequires:  gcc-c++
 BuildRequires:  libcurl-devel
 BuildRequires:  ncurses-devel
 Provides:       bundled(md5-deutsch-c++)
