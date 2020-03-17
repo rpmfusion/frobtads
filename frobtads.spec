@@ -1,11 +1,12 @@
 Name:           frobtads
 Version:        1.2.3
-Release:        10%{?dist}
+Release:        11%{?dist}
 Summary:        Text interpreter for Tads games
 
 License:        non-commercial
 URL:            http://www.tads.org/frobtads.htm
 Source0:        http://www.tads.org/%{name}/%{name}-%{version}.tar.gz
+Patch1:         frobtads-1.2.3-gcc10-fix.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  libcurl-devel
@@ -40,7 +41,7 @@ This package contains Tads 2 and Tads 3 compilers.
 
 
 %prep
-%setup -q
+%autosetup -p1
 
 
 %build
@@ -73,6 +74,9 @@ rm -rf %{buildroot}%{_datadir}/frobtads/tads3/doc
 
 
 %changelog
+* Tue Mar 17 2020 Hans de Goede <j.w.r.degoede@gmail.com> - 1.2.3-11
+- Fix FTBFS
+
 * Wed Feb 05 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.2.3-10
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 

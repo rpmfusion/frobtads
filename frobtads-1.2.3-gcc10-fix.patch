@@ -1,0 +1,15 @@
+diff -up frobtads-1.2.3/tads3/unix/osnetunix.h~ frobtads-1.2.3/tads3/unix/osnetunix.h
+--- frobtads-1.2.3/tads3/unix/osnetunix.h~	2013-05-17 21:52:27.000000000 +0200
++++ frobtads-1.2.3/tads3/unix/osnetunix.h	2020-03-17 23:00:59.775324251 +0100
+@@ -218,11 +218,6 @@ private:
+ # undef ATOMIC_INC_FETCH
+ # undef ATOMIC_DEC_FETCH
+ #endif
+-#ifndef __clang__
+-# if __has_builtin == 0
+-#  undef __has_builtin
+-# endif
+-#endif
+ 
+ /* ------------------------------------------------------------------------ */
+ /*
